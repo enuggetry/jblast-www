@@ -7,6 +7,41 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
+<!-- JQuery UI -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<script>
+  $( function() {
+    $( "#demo-dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "scale",
+        duration: 1000
+      },
+      hide: {
+        effect: "scale",
+        duration: 1000
+      }
+    });
+ 
+    $( "#demo-opener" ).on( "click", function() {
+      $( "#demo-dialog" ).dialog( "open" );
+    });
+    $( "#go-demo" ).on( "click", function() {
+		window.location = "http://jblastdemo.jbrowse.org:1337/login";
+    });
+	$("#demoDialogClose").on( "click", function() {
+		$( "#demo-dialog" ).dialog( "close" );
+	});
+	
+  } );
+</script>
+
+
+
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
@@ -16,7 +51,7 @@
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<!--script type="text/javascript" src="js/modernizr.custom.js"></script-->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +79,8 @@
         <div class="col-md-10 col-md-offset-1">
           <h1>JBlast <span class="brand-heading">JBConnect</span></h1>
           <p class="intro-text">BLAST/Galaxy workflow integration for JBrowse with JBConnect server module</p>
-          <a href="http://jblastdemo.jbrowse.org:1337/login" class="btn btn-default page-scroll jb-btn">Demo</a>
+          <button id="demo-opener" class="btn btn-default page-scroll jb-btn">Demo</button>
+		  <!--a href="http://jblastdemo.jbrowse.org:1337/login" class="btn btn-default page-scroll jb-btn">Demo</a-->
           <a href="http://github.com/gmod/jbconnect-hook-jblast" class="btn btn-default page-scroll jb-btn">Fork</a>
           <a href="jblast.readthedocs.io" class="btn btn-default page-scroll jb-btn">Doc</a>
 		</div>
@@ -65,7 +101,7 @@
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<!--script type="text/javascript" src="js/jquery.1.11.1.js"></script--> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
 <script type="text/javascript" src="js/SmoothScroll.js"></script> 
@@ -74,6 +110,13 @@
 <script type="text/javascript" src="js/jquery.parallax.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="js/contact_me.js"></script> 
+
+<div id="demo-dialog" title="Starting the demo">
+  <p>Demo user/password: <strong>juser/password</strong>.</p>
+  <p>Once logged in, click the "<strong>Volvox test data here</strong>" link to enter the example</p>
+  <button id="go-demo" class="ui-button ui-widget ui-corner-all">Go Demo</button>
+  <button id="demoDialogClose" class="ui-button ui-widget ui-corner-all">Cancel</button>
+</div>
 
 <!-- Javascripts
     ================================================== --> 
