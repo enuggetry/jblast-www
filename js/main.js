@@ -4,6 +4,34 @@ function main() {
 (function () {
    'use strict';
 
+	// handle demo button/dialog box.
+	$( function() {
+	$( "#demo-dialog" ).dialog({
+	  autoOpen: false,
+	  show: {
+		effect: "scale",
+		duration: 500
+	  },
+	  hide: {
+		effect: "scale",
+		duration: 500
+	  }
+	});
+
+	$( "#demo-opener" ).on( "click", function() {
+	  $( "#demo-dialog" ).dialog( "open" );
+	});
+	$( "#go-demo" ).on( "click", function() {
+		window.location = "http://jblastdemo.jbrowse.org:1337/login";
+	});
+	$("#demoDialogClose").on( "click", function() {
+		$( "#demo-dialog" ).dialog( "close" );
+	});
+
+	} );
+   
+   
+   
 	// Hide .navbar first
 	$(".navbar").hide();
 	

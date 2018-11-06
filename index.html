@@ -13,35 +13,6 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-<script>
-  $( function() {
-    $( "#demo-dialog" ).dialog({
-      autoOpen: false,
-      show: {
-        effect: "scale",
-        duration: 500
-      },
-      hide: {
-        effect: "scale",
-        duration: 500
-      }
-    });
- 
-    $( "#demo-opener" ).on( "click", function() {
-      $( "#demo-dialog" ).dialog( "open" );
-    });
-    $( "#go-demo" ).on( "click", function() {
-		window.location = "http://jblastdemo.jbrowse.org:1337/login";
-    });
-	$("#demoDialogClose").on( "click", function() {
-		$( "#demo-dialog" ).dialog( "close" );
-	});
-	
-  } );
-</script>
-
-
-
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
