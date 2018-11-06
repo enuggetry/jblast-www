@@ -60,7 +60,7 @@ function main() {
         target: '.navbar-default',
         offset: 80
     })
-
+/*
   	$(document).ready(function() {
   	    $("#testimonial").owlCarousel({
         navigation : false, // Show next and prev buttons
@@ -70,7 +70,7 @@ function main() {
         });
 
   	});
-
+*/
   	// Portfolio Isotope Filter
     $(window).load(function() {
         var $container = $('.portfolio-items');
