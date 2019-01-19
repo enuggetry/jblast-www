@@ -22,7 +22,7 @@ function main() {
 		window.location = "http://jblastdemo.jbrowse.org:1337/login";
 	  //$( "#demo-dialog" ).dialog( "open" );
 	});
-	$( "#demo-opener2" ).on( "click", function() {
+	$( "#demo-wheat" ).on( "click", function() {
 		window.location = "http://graingenes.org:1337/jbrowse/?data=chinese-spring-jblast";
 	  //$( "#demo-dialog" ).dialog( "open" );
 	});
