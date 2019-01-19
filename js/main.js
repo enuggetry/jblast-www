@@ -19,7 +19,12 @@ function main() {
 	});
 
 	$( "#demo-opener" ).on( "click", function() {
-	  $( "#demo-dialog" ).dialog( "open" );
+		window.location = "http://jblastdemo.jbrowse.org:1337/login";
+	  //$( "#demo-dialog" ).dialog( "open" );
+	});
+	$( "#demo-opener2" ).on( "click", function() {
+		window.location = "http://graingenes.org:1337/jbrowse/?data=chinese-spring-jblast";
+	  //$( "#demo-dialog" ).dialog( "open" );
 	});
 	$( "#go-demo" ).on( "click", function() {
 		window.location = "http://jblastdemo.jbrowse.org:1337/login";
